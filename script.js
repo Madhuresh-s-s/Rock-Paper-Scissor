@@ -43,7 +43,7 @@ let count = JSON.parse(localStorage.getItem('store')) || {
 
      document.querySelector('.js-score').innerHTML = `Wins : ${count.Wins} Losses : ${count.Losses} Tie : ${count.Tie}`;
 
-     document.querySelector('.js-status').innerHTML = `You picked :   <img src="/images/${pickedValue}.png" class="result">    <img src="/images/${compNum}.png" class="result"> :   Computer picked`;
+     document.querySelector('.js-status').innerHTML = `You picked :   <img src="./images/${pickedValue}.png" class="result">    <img src="./images/${compNum}.png" class="result"> :   Computer picked`;
 
      document.querySelector('.js-result').innerHTML = `RESULT :  ${result}`;
     
