@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>R-P-S</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <h1>ROCK-PAPER-SCISSOR</h1>
+    <button onclick="
+    winOrLose('Rock');
+        " class="button"><img src="./images/rock.png" alt="rock" class="icon"></button>
+    <button onclick="
+    winOrLose('Paper');
+   " class="button"><img src="./images/paper.png" alt="paper" class="icon"></button>
+    <button onclick="
+    winOrLose('Scissor');
+    " class="button"><img src="/images/scissor.png" alt="scissor" class="icon"></button>
+
+    <p class="js-score size" ></p>
+
+    <p class="js-status size" ></p>
+
+    <p class="js-result size" ></p>
+
+    <button onclick="
+     count.Losses=0;
+     count.Wins=0;
+     count.Tie=0;
+     localStorage.removeItem('store');
+     document.querySelector('.js-score').innerHTML = `Wins : ${count.Wins} Losses : ${count.Losses} Tie : ${count.Tie}`;
+     document.querySelector('.js-status').innerHTML = ``;
+     document.querySelector('.js-result').innerHTML = ``;
+
+    " class="button">RESET</button>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

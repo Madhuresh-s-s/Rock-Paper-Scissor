@@ -1,0 +1,31 @@
+body{
+  background-color: black;
+  color: azure;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px;
+}
+.icon{
+  height: 100px;
+  width: 100px;
+}
+.button{
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 50px;
+  color:aliceblue;
+}
+.result{
+  height: 100px;
+  width: 100px;
+}
+.size{
+  font-weight: bolds;
+  padding: 15px;
+}
+.button:hover{
+  background-color: bisque;
+  color: black;
+}
