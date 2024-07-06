@@ -4,6 +4,25 @@ let count = JSON.parse(localStorage.getItem('store')) || {
   Tie:0
 };
 
+let intervalon = false;
+let intervalId;
+
+function autoPlay(){
+if(!intervalon){
+ intervalId = setInterval(function(){
+    let pickedValue = compValue();
+    winOrLose(pickedValue);
+  }, 1500)
+  intervalon = true;
+}
+else{
+  clearInterval(intervalId);
+  document.querySelector('.js-status').innerHTML = '';
+  document.querySelector('.js-result').innerHTML = '';
+  intervalon = false;
+}
+}
+
   function winOrLose(pickedValue)
   {
     let compNum=compValue();
@@ -59,3 +78,5 @@ let count = JSON.parse(localStorage.getItem('store')) || {
   else if(randNum>=2/3 && randNum<=1)
   return 'Scissor';
   }
+
+  
