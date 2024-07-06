@@ -14,13 +14,17 @@ if(!intervalon){
     winOrLose(pickedValue);
   }, 1500)
   intervalon = true;
+  document.querySelector('.js-button').innerHTML = 'STOP';
+
 }
 else{
   clearInterval(intervalId);
   document.querySelector('.js-status').innerHTML = '';
   document.querySelector('.js-result').innerHTML = '';
   intervalon = false;
+  document.querySelector('.js-button').innerHTML = 'AUTOPLAY';
 }
+
 }
 
   function winOrLose(pickedValue)
